@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "farmers_backend": {
+      "main": "src/farmers_backend/main.mo",
+      "type": "motoko"
+    },
+    "farmers_frontend": {
+      "dependencies": [
+        "farmers_backend"
+      ],
+      "source": [
+        "src/farmers_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "farmers_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
