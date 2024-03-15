@@ -71,14 +71,14 @@ actor Decentragram {
         if (id == 0 || id > landsCount) {
             // Require valid land ID
             return Prim.unit;
-        }
+        };
 
         let land = lands[id - 1];
 
         if (land.grantAmount + ?caller.callerBalance < desiredAmount) {
             // Require sufficient funds
             return Prim.unit;
-        }
+        };
 
         // Transfer funds to the seller's address (escrow release)
         await (?land.user).transfer(caller, caller.callerBalance);
@@ -99,7 +99,7 @@ actor Decentragram {
         if (Text.isEmpty(hash) || Text.isEmpty(landId)) {
             // Require non-empty hash and landId
             return Prim.unit;
-        }
+        };
 
         imagesCount += 1;
         let image : Image = {
