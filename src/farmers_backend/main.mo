@@ -44,7 +44,7 @@ actor Decentragram {
         message : Text,
         price : Text
     ) : async {
-        if (Text.isEmpty(hash) || Text.isEmpty(title)) {
+        if (Text.isEmpty(hash) || Text.) {
             // Require non-empty hash and title
             return Prim.unit;
         };
