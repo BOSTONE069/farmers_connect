@@ -44,10 +44,10 @@ actor Decentragram {
         message : Text,
         price : Text
     ) : async {
-        if (Text.isEmpty(hash) || Text.) {
-            // Require non-empty hash and title
-            return Prim.unit;
-        };
+        if (Text.isEmpty(hash) || Text.isEmpty(title)) { 
+        // Require non-empty hash and title
+        return Prim.unit;
+    };
 
         landsCount += 1;
         let land : Land = {
